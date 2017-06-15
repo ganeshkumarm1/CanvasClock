@@ -3,7 +3,6 @@ var ctx = canvas.getContext('2d');
 var min, sec, hr, ms, amOrPm = 'AM';
 var radH, radM, radS;
 const threePIByTwo = (3 * Math.PI) / 2;
-
 function init()
 {
 	canvas.width = document.documentElement.clientWidth - 35;
@@ -30,11 +29,13 @@ function draw(now)
 	radM = 0.0001 * ( ( min * 60 * 1000 ) + ( sec * 1000 ) + ms );
 	radS = 0.006 * ( ( sec * 1000 ) + ms );
 
-	drawRect(0, 0, canvas.width, canvas.height, '#0277BD');
-	
-	drawCircle(centerX, centerY, 220, threePIByTwo, rad(radS) + threePIByTwo, false, '#F34182', 'stroke', 30); //second
-	drawCircle(centerX, centerY, 180, threePIByTwo, rad(radM) + threePIByTwo, false, '#ECEFF1', 'stroke', 50); //minute
-	drawCircle(centerX, centerY, 110, threePIByTwo, rad(radH) + threePIByTwo, false, '#4CAF50', 'stroke', 90); //hour
+	drawRect(0, 0, canvas.width, canvas.height, '#25AAE1');
+	drawCircle(centerX, centerY, 220, 0, Math.PI * 2, false, '#546E7A', 'stroke', 30); //secondgrey
+	drawCircle(centerX, centerY, 220, threePIByTwo, rad(radS) + threePIByTwo, false, '#DC543E', 'stroke', 30); //second
+	drawCircle(centerX, centerY, 180, 0, Math.PI * 2, false, '#455A64', 'stroke', 50); //minutegrey
+	drawCircle(centerX, centerY, 180, threePIByTwo, rad(radM) + threePIByTwo, false, '#FEB737', 'stroke', 50); //minute
+	drawCircle(centerX, centerY, 110, 0, Math.PI * 2 , false, '#37474F', 'stroke', 90); //hourgrey
+	drawCircle(centerX, centerY, 110, threePIByTwo, rad(radH) + threePIByTwo, false, '#27AE61', 'stroke', 90); //hour
 	drawCircle(centerX, centerY, 95, 0, Math.PI * 2, false, '#263238', 'fill', '50'); //inner
 	drawText(`${hr.toString().length == 1?'0'+hr:hr}:${min.toString().length == 1?'0'+min:min}:${sec.toString().length == 1?'0'+sec:sec}`, canvas.width / 2 - 65, canvas.height / 2 + 15, '#ffffff', '40px');
 	drawText(amOrPm, canvas.width / 2 - 15, canvas.height / 2 + 50, '#ffffff', '25px');
