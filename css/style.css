@@ -1,0 +1,22 @@
+body {
+	background-color: #0277BD;
+	text-align: center;
+	color: #212121;
+}
+
+span {
+	font-family: 'Lobster';
+}
+
+a {
+	color: #212121;
+	transition: linear 0.3s;
+}
+
+a:hover {
+	opacity: 0.8;
+}
+a, a:hover {
+	text-decoration: none;
+}
+
