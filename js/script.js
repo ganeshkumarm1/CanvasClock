@@ -23,8 +23,9 @@ function draw(now)
 	if(hr > 12)
 	{
 		amOrPm = 'PM';
+		hr -= 12;
 	}
-	hr -= 12;
+	
 	radH = 0.000008333 * ( ( hr * 60 * 60 * 1000 ) + ( min * 60 * 1000 ) + ( sec * 1000 ) + ms );
 	radM = 0.0001 * ( ( min * 60 * 1000 ) + ( sec * 1000 ) + ms );
 	radS = 0.006 * ( ( sec * 1000 ) + ms );
