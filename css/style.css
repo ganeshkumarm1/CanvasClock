@@ -1,7 +1,7 @@
 body {
-	background-color: #25AAE1;
+	background-color: #202833;
 	text-align: center;
-	color: #212121;
+	color: #fafafa;
 }
 
 span {
@@ -9,7 +9,7 @@ span {
 }
 
 a {
-	color: #212121;
+	color: #fafafa;
 	transition: linear 0.3s;
 }
 

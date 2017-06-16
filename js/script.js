@@ -25,12 +25,12 @@ function draw(now)
 		amOrPm = 'PM';
 		hr -= 12;
 	}
-	
+
 	radH = 0.000008333 * ( ( hr * 60 * 60 * 1000 ) + ( min * 60 * 1000 ) + ( sec * 1000 ) + ms );
 	radM = 0.0001 * ( ( min * 60 * 1000 ) + ( sec * 1000 ) + ms );
 	radS = 0.006 * ( ( sec * 1000 ) + ms );
 
-	drawRect(0, 0, canvas.width, canvas.height, '#25AAE1');
+	drawRect(0, 0, canvas.width, canvas.height, '#202833');
 	drawCircle(centerX, centerY, 220, 0, Math.PI * 2, false, '#546E7A', 'stroke', 30); //secondgrey
 	drawCircle(centerX, centerY, 220, threePIByTwo, rad(radS) + threePIByTwo, false, '#DC543E', 'stroke', 30); //second
 	drawCircle(centerX, centerY, 180, 0, Math.PI * 2, false, '#455A64', 'stroke', 50); //minutegrey
