@@ -38,7 +38,7 @@ function draw(now)
 	drawCircle(centerX, centerY, 110, 0, Math.PI * 2 , false, '#37474F', 'stroke', 90); //hourgrey
 	drawCircle(centerX, centerY, 110, threePIByTwo, rad(radH) + threePIByTwo, false, '#27AE61', 'stroke', 90); //hour
 	drawCircle(centerX, centerY, 95, 0, Math.PI * 2, false, '#263238', 'fill', '50'); //inner
-	drawText(`${hr.toString().length == 1?'0'+hr:hr}:${min.toString().length == 1?'0'+min:min}:${sec.toString().length == 1?'0'+sec:sec}`, canvas.width / 2 - 63, canvas.height / 2 + 15, '#ffffff', '40px');
+	drawText(`${hr.toString().length == 1?'0'+hr:hr}:${min.toString().length == 1?'0'+min:min}:${sec.toString().length == 1?'0'+sec:sec}`, canvas.width / 2 - 59, canvas.height / 2 + 15, '#ffffff', '40px');
 	drawText(amOrPm, canvas.width / 2 - 15, canvas.height / 2 + 50, '#ffffff', '25px');
 	window.requestAnimationFrame(draw);	
 }
