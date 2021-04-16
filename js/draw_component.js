@@ -1,5 +1,5 @@
 function drawText(text, x, y, color, size) {
-	ctx.font = `${size} "Passion One"`;
+	ctx.font = `${size} "Poppins"`;
 	ctx.fillStyle = color;
 	ctx.fillText(text, x, y);
 }
@@ -16,17 +16,17 @@ function drawArc(x, y, radius, start, end, clockwise)
 }
 
 function drawCircle(x, y, radius, start, end, clockwise, color, type, thickness) {
-	if(type == 'fill')
-	{
-		ctx.fillStyle = color;
-		drawArc(x, y, radius, start, end, clockwise)
-		ctx.fill();
-	}
-	else if(type == 'stroke')
-	{
-		ctx.strokeStyle = color;
-		ctx.lineWidth = thickness;
-		drawArc(x, y, radius, start, end, clockwise)
-		ctx.stroke();
+	switch (type) {
+		case 'fill':
+			ctx.fillStyle = color;
+			drawArc(x, y, radius, start, end, clockwise)
+			ctx.fill();
+			break;
+		case 'stroke':
+			ctx.strokeStyle = color;
+			ctx.lineWidth = thickness;
+			drawArc(x, y, radius, start, end, clockwise)
+			ctx.stroke();
+			break
 	}
 }

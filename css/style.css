@@ -1,11 +1,10 @@
-body {
-	background-color: #202833;
-	text-align: center;
-	color: #fafafa;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
-span {
-	font-family: 'Lobster';
+body {
+	background-color: #1C1C28;
+	text-align: center;
+	color: #FEFEFE;
+	font-family: 'Poppins', sans-serif;
 }
 
 a {
@@ -16,7 +15,3 @@ a {
 a:hover {
 	opacity: 0.8;
 }
-a, a:hover {
-	text-decoration: none;
-}
-
