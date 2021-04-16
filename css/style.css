@@ -5,6 +5,14 @@ body {
 	text-align: center;
 	color: #FEFEFE;
 	font-family: 'Poppins', sans-serif;
+	overflow: hidden;
+}
+
+canvas {
+	object-fit: contain;
+	width: 100%;
+	margin: 0px auto;
+	display: block;
 }
 
 a {
